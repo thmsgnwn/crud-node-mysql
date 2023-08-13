@@ -5,12 +5,18 @@
 npm init -y
 ```
 
-### intall dependency
+### install dependency
 ```
 npm i {{ dependency }}
 ```
 
-### intall dev dependency
+### install dev dependency
 ```
-npm i nodemon --save-dev
+npm i -g nodemon
 ```
+
+### install postman (optional)
+
+### install VSCode
+
+### Install Xampp
