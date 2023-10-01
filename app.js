@@ -14,6 +14,7 @@ link.authenticate().then(() => console.log("berhasil terkonskesi db"));
 // call User
 const User = require("./models/User");
 
+// CREATE
 app.post("/crud", async (req, res) => {
   try {
     const { username, email, password } = req.body;
@@ -31,5 +32,20 @@ app.post("/crud", async (req, res) => {
     console.log(error);
   }
 });
+
+// READ
+app.get("/all", async (req, res) => {
+  try {
+    const getAllUser = await User.findAll({});
+
+    res.json(getAllUser);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+// UPDATE
+
+// DELETE
 
 app.listen(5000, () => console.log("koneksi berjalan di 5000"));
